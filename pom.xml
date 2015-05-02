@@ -23,6 +23,10 @@
 		<bintray-user>marceloshima</bintray-user>
 		<github-user>mshima</github-user>
 
+		<nexus-version>2.10.0-01</nexus-version>
+
+	    <public.serverId>bintray</public.serverId>
+
 		<public-release.serverId>bintray</public-release.serverId>
 		<public-release.url>
 			https://api.bintray.com/maven/${bintray-user}/maven/${project.artifactId}
@@ -46,6 +50,7 @@
 		<dependency>
 			<groupId>org.sonatype.nexus</groupId>
 			<artifactId>nexus-plugin-api</artifactId>
+			<version>${nexus-version}</version>
 			<scope>provided</scope>
 		</dependency>
 
@@ -58,6 +63,7 @@
 		<dependency>
 			<groupId>org.sonatype.nexus</groupId>
 			<artifactId>nexus-plugin-testsupport</artifactId>
+			<version>${nexus-version}</version>
 			<scope>test</scope>
 		</dependency>
 
@@ -84,6 +90,7 @@
 			<plugin>
 				<groupId>org.sonatype.nexus</groupId>
 				<artifactId>nexus-plugin-bundle-maven-plugin</artifactId>
+				<version>${nexus-version}</version>
 				<extensions>true</extensions>
 			</plugin>
 			<plugin>
