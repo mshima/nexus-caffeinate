@@ -12,10 +12,25 @@
 	<artifactId>nexus-caffeinate</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>nexus-plugin</packaging>
+	<url>https://github.com/${github-user}/github-maven-example</url>
+
+	<issueManagement>
+		<url>https://github.com/${github-user}/${project.artifactId}/issues</url>
+		<system>GitHub Issues</system>
+	</issueManagement>
 
 	<properties>
-		<nexus-version>2.10.0-01</nexus-version>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<bintray-user>marceloshima</bintray-user>
+		<github-user>mshima</github-user>
 	</properties>
+
+	<scm>
+		<url>https://github.com/${github-user}/${project.artifactId}</url>
+		<connection>scm:git:git://github.com/${github-user}/${project.artifactId}.git</connection>
+		<developerConnection>scm:git:git@github.com:${github-user}/${project.artifactId}.git</developerConnection>
+		<tag>HEAD</tag>
+	</scm>
 
 	<dependencies>
 		<dependency>
@@ -27,7 +42,7 @@
 		<dependency>
 			<groupId>br.net.shima.utils</groupId>
 			<artifactId>java-caffeinate</artifactId>
-			<version>0.0.7</version>
+			<version>0.1.0</version>
 		</dependency>
 
 		<dependency>
@@ -37,6 +52,13 @@
 		</dependency>
 
 	</dependencies>
+
+	<distributionManagement>
+		<repository>
+			<id>bintray</id>
+			<url>https://api.bintray.com/maven/${bintray-user}/maven/${project.artifactId}</url>
+		</repository>
+	</distributionManagement>
 
 	<build>
 		<plugins>
