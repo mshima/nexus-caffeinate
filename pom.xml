@@ -90,7 +90,6 @@
 			<plugin>
 				<groupId>org.sonatype.nexus</groupId>
 				<artifactId>nexus-plugin-bundle-maven-plugin</artifactId>
-				<version>${nexus-version}</version>
 				<extensions>true</extensions>
 			</plugin>
 			<plugin>
