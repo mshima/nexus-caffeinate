@@ -9,7 +9,7 @@
 
 	<groupId>br.net.shima.nexus.caffeinate</groupId>
 	<artifactId>nexus-caffeinate</artifactId>
-	<version>0.0.2-SNAPSHOT</version>
+	<version>0.0.3-SNAPSHOT</version>
 	<packaging>nexus-plugin</packaging>
 	<url>https://github.com/${github-user}/github-maven-example</url>
 
@@ -69,6 +69,13 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-javadoc-plugin</artifactId>
+				<configuration>
+					<skip>true</skip>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-gpg-plugin</artifactId>
 				<configuration>
 					<skip>true</skip>
 				</configuration>
