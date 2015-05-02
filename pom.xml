@@ -9,7 +9,7 @@
 
 	<groupId>br.net.shima.nexus.caffeinate</groupId>
 	<artifactId>nexus-caffeinate</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>0.0.2-SNAPSHOT</version>
 	<packaging>nexus-plugin</packaging>
 	<url>https://github.com/${github-user}/github-maven-example</url>
 
