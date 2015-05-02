@@ -26,6 +26,7 @@
 		<nexus-version>2.10.0-01</nexus-version>
 
 	    <public.serverId>bintray</public.serverId>
+		<public.nexusUrl>https://api.bintray.com</public.nexusUrl>
 
 		<public-release.serverId>bintray</public-release.serverId>
 		<public-release.url>
@@ -102,6 +103,13 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-gpg-plugin</artifactId>
+				<configuration>
+					<skip>true</skip>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.sonatype.plugins</groupId>
+				<artifactId>nexus-staging-maven-plugin</artifactId>
 				<configuration>
 					<skip>true</skip>
 				</configuration>
